@@ -1,0 +1,65 @@
+li.wfid_owner, li.wfid_group, li.wfid_object {
+  list-style-type: none;
+  list-style-position: outside;
+  line-height: 13pt;
+  font-size: 12pt;
+}
+
+li.wfid_owner img, li.wfid_group img {
+  margin-top: 2pt;
+  float: left;
+  cursor: pointer;
+}
+
+li.wfid_object {
+  font-style: italic;
+}
+li.wfid_owner {
+  font-style: italic;
+}
+li.wfid_group {
+  font-style: normal;
+  font-size: 12pt;
+}
+
+ul.list{
+  padding-left: 12pt;
+}
+
+li[data-childs='0'] {
+  margin-left: 12pt;
+  color: black;
+}
+
+/*
+li[data-online]:before {
+  content: url('/img/online.png');
+}
+li[data-online='0']:before {
+  content: url('/img/offline.png');
+}
+*/
+div.group, div.owner, div.object {
+  border-radius: 5px;
+  border-width: 0px;
+  border-style: solid;
+  display: inline;
+  cursor: pointer;
+}
+
+div.group.active {
+  background-color: #0a6;
+}
+div.group.active.hover {
+  background-color: #0fa;
+}
+div.owner.active {
+  background-color: #6a0;
+}
+div.owner.active.hover {
+  background-color: #af0;
+}
+
+.hidden {
+  display: none;
+}

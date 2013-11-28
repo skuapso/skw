@@ -1,0 +1,12 @@
+{application, skw,
+ [
+  {description, "SKUAPSO Web"},
+  {vsn, git},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {env, []},
+  {mod, {skw_app, []}}
+ ]}.

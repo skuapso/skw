@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>С.К.У.A.П.С.О.</title>
+  <link rel="stylesheet" href="/nitrogen/jquery-ui/jquery.ui.all.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/css/jquery.contextMenu.css" type="text/css" media="screen">
+<!--     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" type="text/css" media="screen" charset="utf-8" /> -->
+  <link rel="stylesheet" href="/nitrogen/nitrogen.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body style='display: none'>
+  <div id='dialog-terminal' title='Терминал'>
+    <form>
+      <label>Модель<input name='model_id'></label><br>
+      <label>UIN<input name='uin'></label><br>
+      <label>Серийный номер<input name='serial_no'></label><br>
+    </form>
+  </div>
+  <menu type='context' id='group'>
+    <command label='Переименовать' data-action='edit_title'>
+<!--    <menu label='Добавить'>
+      <command label='Объект' data-action='add_object'>
+      <command label='Подгруппу' data-action='add_group'>
+    </menu>
+    <command label='Заявка' data-action='issue'> -->
+  </menu>
+  <menu type='context' id='object'>
+    <!--    <command label='Заявка' data-action='issue'> -->
+    <menu label='Редактировать'>
+      <command label='Гос. номер' data-action='edit_no'>
+      <command label='Модель' data-action='edit_model_id'>
+      <command label='Терминал' data-action='edit_terminal_id'>
+        <!--      <command label='Специализация' data-action='edit_specialization_id'> -->
+    </menu>
+    <!--    <command label='Следить' data-action='trace'> -->
+  </menu>
+  <menu type='context' id='owner'>
+    <command label='Переименовать' data-action='edit_title'>
+<!--    <command label='Добавить подразделение' data-action='add'> -->
+  </menu>
+  <div id='test'></div>
+  [[[skw_items:list()]]]
+  <script src='/js/jquery.js' type='text/javascript' charset='utf-8'></script>
+  <script src='/js/jquery-ui.js' type='text/javascript' charset='utf-8'></script>
+<!--  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> -->
+<!--     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> -->
+<!--     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script> -->
+  <script src='/nitrogen/livevalidation.js' type='text/javascript' charset='utf-8'></script>
+  <script src='/nitrogen/nitrogen.js' type='text/javascript' charset='utf-8'></script>
+  <script src='/js/jquery.tinysort.js' type='text/javascript' charset='utf-8'></script>
+  <script src='/js/jquery.contextMenu.js' type='text/javascript' charset='utf-8'></script>
+  <script src='/js/skuapso.js' type='text/javascript' charset='utf-8'></script>
+  <script type='text/javascript'>
+    [[[skw:serial_data()]]]
+    [[[skw:models()]]]
+    [[[skw:terminals()]]]
+    [[[skw:terminal_models()]]]
+    [[[script]]]
+    setTimeout(function() {$('body').fadeIn('slow')}, 1000);
+  </script>
+</body>
+</html>

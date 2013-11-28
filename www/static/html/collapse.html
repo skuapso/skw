@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Collapse testing</title>
+  <link rel="stylesheet" href="/css/jquery.contextMenu.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/css/jquery.collapsibleList.css" type="text/css" media="screen">
+  <link rel="stylesheet" href="/nitrogen/jquery-ui/jquery.ui.all.css" type="text/css" media="screen">
+<!--     <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/smoothness/jquery-ui.css" type="text/css" media="screen" charset="utf-8" /> -->
+  <link rel="stylesheet" href="/nitrogen/nitrogen.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <ul id='ul1' class='list collapsibleList'>
+    <li id='li1' class='group'>test1<ul id='ul2' class='list'><li id='li2'>sub1</li></ul></li>
+    <li id='li3' class='group'>test2<ul id='ul3'><li id='li4'>test3</li></ul></li>
+  </ul>
+  <div id="demo">
+    <div id='first'>
+      <h2 id='sum1'>Summary1</h2>
+      <div id='det1'>details1...</div>
+    </div>
+    <div id='second'>
+      <h2 id='sum2'>Summary2</h2>
+      <div id='det2'>details2...</div>
+    </div>
+  </div>
+  <div id="demo1" data-collapse='{"query": "div h2"}' class='collapsible'>
+    <div id='first1'>
+      <h2 id='sum11'>Summary1</h2>
+      <div id='det11'>details1...</div>
+    </div>
+    <div id='second1'>
+      <h2 id='sum21'>Summary2</h2>
+      <div id='det21'>details2...</div>
+    </div>
+  </div>
+  <script src='/nitrogen/jquery.js' type='text/javascript' charset='utf-8'></script>
+<!--  <script src='/nitrogen/jquery-ui.js' type='text/javascript' charset='utf-8'></script> -->
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<!--     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js"></script> -->
+<!--     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script> -->
+  <script src='/nitrogen/livevalidation.js' type='text/javascript' charset='utf-8'></script>
+  <script src='/nitrogen/nitrogen.js' type='text/javascript' charset='utf-8'></script>
+  <script src='/nitrogen/bert.js' type='text/javascript' charset='utf-8'></script>
+  <script src='/js/jquery.contextMenu.js' type='text/javascript' charset='utf-8'></script>
+  <!--  <script src='/js/jquery.collapse.js' type='text/javascript' charset='utf-8'></script> -->
+  <script src='/js/jquery.collapsibleList.js' type='text/javascript' charset='utf-8'></script>
+  <script type='text/javascript'>
+    new jQueryCollapse($("#demo"), {query: 'div h2'});
+  </script>
+</body>
+</html>
